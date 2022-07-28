@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 public class CurrencyExchange {
     @Id
     @Column(name = "id")
-    private int id;
+    private Long id;
     @Column(name = "currency_from")
     private String from;
     @Column(name = "currency_to")
@@ -22,18 +22,18 @@ public class CurrencyExchange {
     public CurrencyExchange() {
     }
 
-    public CurrencyExchange(int id, String from, String to, BigDecimal conversionMultiple) {
+    public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
         this.id = id;
         this.from = from;
         this.to = to;
         this.conversionMultiple = conversionMultiple;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
